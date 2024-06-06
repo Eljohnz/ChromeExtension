@@ -1,5 +1,5 @@
-let saveEl = document.querySelector(".main__body--button")
+let saveEl = document.querySelector("#main__body--button")
 
-function save() {
+saveEl.addEventListener ("click", function() {
     console.log("Clicked")
-}
+})
