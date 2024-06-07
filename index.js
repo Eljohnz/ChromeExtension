@@ -8,6 +8,14 @@ saveEl.addEventListener ("click", function() {
     console.log(myLeads)
 })
 
+let listItems = ""
+
 for (let i = 0; i < myLeads.length; i++) {
-    listEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    listItems += "<li>" + myLeads[i] + "</li>"
+
+    // another way
+    // const li = document.createElement("li")
+    // li.textContent = myLeads[i]
+    // ulEl.append(li)
 }
+    listEl.innerHTML = listItems
