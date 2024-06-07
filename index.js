@@ -1,5 +1,8 @@
-let saveEl = document.querySelector("#main__body--button")
+let userInput = []
+const saveEl = document.querySelector("#main__body--button")
+const inputEl = document.querySelector("#main__body--input")
 
 saveEl.addEventListener ("click", function() {
-    console.log("Clicked")
+    myLeads.push(inputEl.value)
+    console.log(myLeads)
 })
