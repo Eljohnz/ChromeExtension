@@ -14,7 +14,13 @@ let listItems = ""
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < userInput.length; i++) {
-        listItems += "<li>" + userInput[i] + "</li>"
+        listItems += `
+            <li>
+                <a target='_blank' href='${userInput[i]}'>
+                    ${userInput[i]}
+                </a>
+            </li>
+        `
     }
     listEl.innerHTML = listItems  
 }
