@@ -4,18 +4,26 @@ const inputEl = document.querySelector("#main__body--input")
 const listEl = document.querySelector("#list")
 
 saveEl.addEventListener ("click", function() {
-    myLeads.push(inputEl.value)
-    console.log(myLeads)
+    userInput.push(inputEl.value)
+    renderLeads()
 })
 
 let listItems = ""
 
-for (let i = 0; i < myLeads.length; i++) {
-    listItems += "<li>" + myLeads[i] + "</li>"
-
-    // another way
-    // const li = document.createElement("li")
-    // li.textContent = myLeads[i]
-    // ulEl.append(li)
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i < userInput.length; i++) {
+        listItems += "<li>" + userInput[i] + "</li>"
+    }
+    listEl.innerHTML = listItems  
 }
-    listEl.innerHTML = listItems
+/*
+for (let i = 0; i < userInput.length; i++) {
+    listItems += "<li>" + userInput[i] + "</li>"
+
+     another way
+     const li = document.createElement("li")
+     li.textContent = userInput[i]
+     ulEl.append(li)
+}
+    listEl.innerHTML = listItems */
