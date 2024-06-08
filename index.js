@@ -5,6 +5,7 @@ const listEl = document.querySelector("#list")
 
 saveEl.addEventListener ("click", function() {
     userInput.push(inputEl.value)
+    inputEl.value = ""
     renderLeads()
 })
 
