@@ -8,6 +8,7 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     background: #2E323F;
+    min-width: 400px;
 }
 
 .container {
