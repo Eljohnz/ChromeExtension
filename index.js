@@ -3,6 +3,13 @@ const saveEl = document.querySelector("#main__body--button")
 const inputEl = document.querySelector("#main__body--input")
 const listEl = document.querySelector("#list")
 
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("userInput") )
+
+if (leadsFromLocalStorage) {
+    userInput = leadsFromLocalStorage
+    renderLeads()
+}
+
 saveEl.addEventListener ("click", function() {
     userInput.push(inputEl.value)
     inputEl.value = ""

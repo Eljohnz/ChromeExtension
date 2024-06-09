@@ -41,6 +41,15 @@ body {
     width: 30%;
 }
 
+#delete-btn {
+    margin-top: 9px;
+    background: transparent;
+    color: #de642b;
+    padding: 10px 20px;
+    width: 30%;
+    border: 1px solid #de642b;
+}
+
 ul {
     margin-top: 20px;
     list-style: none;
