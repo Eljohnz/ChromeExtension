@@ -12,7 +12,7 @@ if (leadsFromLocalStorage) {
 }
 
 deleteBtn.addEventListener("dblclick", function(){
-    myLeads = []
+    userInput = []
     localStorage.clear()
     render(userInput)
 })
