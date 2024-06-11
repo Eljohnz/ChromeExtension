@@ -3,13 +3,20 @@ const saveEl = document.querySelector("#main__body--button")
 const inputEl = document.querySelector("#main__body--input")
 const listEl = document.querySelector("#list")
 const deleteBtn = document.querySelector("#delete-btn")
-
+const tabBtn = document.querySelector("#tab-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("userInput") )
 
 if (leadsFromLocalStorage) {
     userInput = leadsFromLocalStorage
     render(userInput)
 }
+
+tabBtn.addEventListener("click", function(){
+    userInput.push(tabs[0].url)
+    localStorage.setItem("userInput", JSON.stringify(userInput) )
+    render(userInput)
+    
+})
 
 deleteBtn.addEventListener("dblclick", function(){
     userInput = []
@@ -40,6 +47,7 @@ function render(leads) {
     }
     listEl.innerHTML = listItems  
 }
+
 /*
 for (let i = 0; i < userInput.length; i++) {
     listItems += "<li>" + userInput[i] + "</li>"
