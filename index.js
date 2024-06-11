@@ -5,17 +5,21 @@ const listEl = document.querySelector("#list")
 const deleteBtn = document.querySelector("#delete-btn")
 const tabBtn = document.querySelector("#tab-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("userInput") )
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
 
 if (leadsFromLocalStorage) {
     userInput = leadsFromLocalStorage
     render(userInput)
 }
 
-tabBtn.addEventListener("click", function(){
-    userInput.push(tabs[0].url)
-    localStorage.setItem("userInput", JSON.stringify(userInput) )
-    render(userInput)
-    
+tabBtn.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        userInput.push(tabs[0].url)
+        localStorage.setItem("userInput", JSON.stringify(userInput) )
+        render(userInput)
+    })
 })
 
 deleteBtn.addEventListener("dblclick", function(){
