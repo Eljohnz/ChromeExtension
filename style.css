@@ -12,12 +12,9 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #main__body--input {
@@ -34,19 +31,22 @@ body {
 }
 
 #main__body--button {
-    align-self: center;
     border: none;
     background-color: #de642b;
-    padding: 10px 20px;
-    width: 30%;
+    padding: 5px 20px;
 }
 
 #delete-btn {
-    margin-top: 9px;
     background: transparent;
     color: #de642b;
-    padding: 10px 20px;
-    width: 30%;
+    padding: 4px 20px;
+    border: 1px solid #de642b;
+}
+
+#tab-btn {
+    background: transparent;
+    color: #de642b;
+    padding: 4px 20px;
     border: 1px solid #de642b;
 }
 
